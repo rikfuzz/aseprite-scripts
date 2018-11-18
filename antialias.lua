@@ -1,8 +1,17 @@
--- Antialiases inside the foreground colour anywhere it touches the background colour (automatically picks a colour inbetween the two).
--- (Swap fg/bg colours before running to antialias outside instead)
--- This is a pixel-art style antialias, only adding 1 new colour with a max length of 2 on the antialis pixels.
+--[[
+==Pixel Antialias v1.00 (LUA)==
+Antialiases inside the foreground colour anywhere it touches the background colour (automatically picks a colour inbetween the two).
+(Swap fg/bg colours before running to reverse)
+This is a pixel-art style antialias, only adding 1 new colour with a max length of 2 on the antialis pixels per side.
 
--- By Rik Nicol / @hot_pengu / https://github.com/rikfuzz/aseprite-scripts
+By Rik Nicol / @hot_pengu / https://github.com/rikfuzz/aseprite-scripts
+
+Requirements
+Aseprite (Currently requires Aseprite v1.2.10-beta2)
+Click "Open Scripts Folder" in File > Scripts and drag the script into the folder.
+]]--
+
+
 
 local anycolor = false; -- set true to antialises the edge of the foreground colour no matterwhat colour is bordering it
 local extraSmooth = false; --set true to run an extra process over the outside of the forground colour, usually only makes a minor addition and is quite SLOW  

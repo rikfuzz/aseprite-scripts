@@ -28,8 +28,8 @@ else
     canvas = {
         x = 0,
         y = 0,
-        width = app.activeSprite.width,
-        height = app.activeSprite.height
+        width = app.activeImage.width,
+        height = app.activeImage.height
     };
 end
 

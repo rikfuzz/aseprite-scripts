@@ -10,7 +10,7 @@ Click "Open Scripts Folder" in File > Scripts and drag the script into the folde
 ]]--
 
 
-local newImage = Image(app.activeImage.width+20,app.activeImage.height+2)
+local newImage = Image(app.activeImage.width+2,app.activeImage.height+2)
 newImage:putImage(app.activeImage,1,1)
 
 local function clrpx(color)
@@ -76,6 +76,9 @@ local function ol()
 end
 
 ol()
-app.activeCel.position = {x=app.activeCel.position.x-1,y=app.activeCel.position.y-1}
+app.transaction(
+  function()
+    app.activeCel.position = {x=app.activeCel.position.x-1,y=app.activeCel.position.y-1}
+    app.activeCel.image = newImage;
+  end)
 
-app.activeCel.image = newImage;

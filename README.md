@@ -11,4 +11,3 @@ This is a pixel-art style antialias, only adding 1 new colour with a max length 
 
 <h1>Outline</h1>
 Outlines the current image with the foreground colour. 
-(undo doesn't totally work here, will move the image down-right 1px)
